@@ -168,9 +168,30 @@
             id_penalty.innerHTML = `Penalty is ${penalty}`;
         }
         document.getElementById("help").onclick = help;
-        
+
 
     }
+    function bonusGame(){
+            treasureLocation = Math.floor(Math.random() * 25);
+            trapLocation = Math.floor(Math.random() * 25);
+            for(let i=0; i<24; i++){
+                if(i === trapLocation){
+                    id = document.getElementById(ids[i]);
+                    id.src = "trap.jpg";
+                }
+                else if(i === treasureLocation){
+                    id = document.getElementById(ids[i]);
+                    id.src = "treasure.jpg";
+                }
+                else{
+                    id = document.getElementById(ids[i]);
+                    id.src = "pirate.jpg";
+                }
+
+            }
+        }
+        id_location.innerHTML = `Number of locations checked is  ${checkCount}`;
+        id_penalty.innerHTML = `Penalty is ${penalty}`;
     
 
   </script>
